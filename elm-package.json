@@ -1,7 +1,7 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.0",
     "summary": "CreditCard validation",
-    "repository": "https://github.com/ersocon/creditcard-validation.git",
+    "repository": "https://github.com/janjelinek/creditcard-validation.git",
     "license": "MIT",
     "source-directories": [
         "src/"

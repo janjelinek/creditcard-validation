@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ersocon/creditcard-validation.git"
+    "url": "git+https://github.com/janjelinek/creditcard-validation.git"
   },
   "author": "ersocon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ersocon/creditcard-validation/issues"
+    "url": "https://github.com/janjelinek/creditcard-validation/issues"
   },
-  "homepage": "https://github.com/ersocon/creditcard-validation#readme",
+  "homepage": "https://github.com/janjelinek/creditcard-validation#readme",
   "devDependencies": {
     "elm-test": "0.18.9"
   }

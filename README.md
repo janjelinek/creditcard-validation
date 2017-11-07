@@ -21,3 +21,6 @@ function with the signature of String -> Bool.
 ```
 npm install && npm test
 ```
+
+This forked version was temporary created because of no response in PR withh fix which was accepted, but 
+not merged for longer time. So for everybody who needs use fixed version, this is solution. 
