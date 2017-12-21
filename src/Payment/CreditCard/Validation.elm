@@ -86,7 +86,14 @@ checkLuhn input =
         )
 
     checkSumMod n =
-      10 - (n % 10) == lastDigit
+      let
+        modulo =
+          n % 10
+      in
+        if modulo > 0 then
+          10 - modulo == lastDigit
+        else
+          modulo == lastDigit
   in
     input
       |> String.split ""
