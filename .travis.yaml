@@ -27,9 +27,9 @@ install:
   - node --version
   - npm --version
   - npm install
+  - pushd tests && elm make && popd
 
 script:
-  - node_modules/.bin/elm make
-  # Disabled tests for now
-  # node_modules/.bin/elm-test
+  - elm make
+  - npm test
 

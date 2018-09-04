@@ -1,12 +1,12 @@
-module Tests exposing (..)
+module Tests exposing (credCartValidationTest)
 
 import Expect exposing (..)
 import Payment.CreditCard.Validation as CCV
 import Test exposing (..)
 
 
-all : Test
-all =
+credCartValidationTest : Test
+credCartValidationTest =
     describe "Credit Card Validation Test Suite"
         [ describe "invalid"
             [ test "check incorrect numbers as negative" <|
