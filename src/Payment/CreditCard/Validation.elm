@@ -39,13 +39,15 @@ isNumber : String -> Maybe String
 isNumber input =
     let
         regexRule =
-            Regex.regex "^[\\d]+$"
+            Maybe.withDefault Regex.never <|
+                Regex.fromString "^[\\d]+$"
     in
     if
-        Regex.find Regex.All regexRule input
+        Regex.find regexRule input
             |> List.isEmpty
     then
         Nothing
+
     else
         Just input
 
@@ -54,6 +56,7 @@ checkLength : String -> Maybe String
 checkLength input =
     if input /= "" && String.length input <= 19 then
         Just input
+
     else
         Nothing
 
@@ -72,15 +75,17 @@ checkLuhn input =
         multiplyOdds =
             List.indexedMap
                 (\i item ->
-                    if i % 2 == 0 then
+                    if modBy 2 i == 0 then
                         let
                             result =
                                 parseInt item * 2
                         in
                         if result > 9 then
                             result - 9
+
                         else
                             result
+
                     else
                         parseInt item
                 )
@@ -88,10 +93,11 @@ checkLuhn input =
         checkSumMod n =
             let
                 modulo =
-                    n % 10
+                    modBy 10 n
             in
             if modulo > 0 then
                 10 - modulo == lastDigit
+
             else
                 modulo == lastDigit
     in
@@ -109,4 +115,4 @@ checkLuhn input =
 
 parseInt : String -> Int
 parseInt input =
-    Result.withDefault 0 (String.toInt input)
+    Maybe.withDefault 0 (String.toInt input)
