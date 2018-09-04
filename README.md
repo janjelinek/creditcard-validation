@@ -1,4 +1,7 @@
 # creditcard-validation
+
+[![Build Status](https://travis-ci.com/janjelinek/creditcard-validation.svg?branch=master)](https://travis-ci.com/janjelinek/creditcard-validation)
+
 Helper functions to check if a given number is a valid cred card number or not
 
 ### Description
@@ -22,5 +25,5 @@ function with the signature of String -> Bool.
 npm install && npm test
 ```
 
-This forked version was temporary created because of no response in PR withh fix which was accepted, but 
-not merged for longer time. So for everybody who needs use fixed version, this is solution. 
+This forked version was temporary created because of no response in PR withh fix which was accepted, but
+not merged for longer time. So for everybody who needs use fixed version, this is solution.

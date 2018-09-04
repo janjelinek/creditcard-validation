@@ -16,7 +16,7 @@ credCartValidationTest =
         , describe "valid" <|
             List.map
                 (\validCreditCardNumber ->
-                    test ("check correct number is " ++ toString validCreditCardNumber) <|
+                    test ("check correct number is " ++ validCreditCardNumber) <|
                         \() ->
                             Expect.equal True <| CCV.isValid validCreditCardNumber
                 )
